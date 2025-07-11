@@ -1,3 +1,333 @@
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+$primary-white: #ffffff;
+$primary-orange: #f77f00;
+$primary-grey: #3d3d3d;
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $primary-grey;
+  color: $primary-orange;
+  padding: 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 2rem;
+  font-weight: bold;
+}
+
+.nav-text {
+  text-decoration: none;
+  color: $primary-orange;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: $primary-white;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  color: #e2e2e2;
+}
+
+header img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 10px 0;
+  padding: 1rem;
+  margin-right: 2rem;
+}
+
+header a {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+  font-size: 1.1em;
+}
+
+.Recent {
+  margin-top: 1rem;
+  background-image: url(../images/1582949112867.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.hover-text {
+  background-color: rgba(61, 61, 61, 0.85);
+  width: 30rem;
+  border-radius: 5rem;
+  color: $primary-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin-left: 5rem;
+  margin-top: 2rem;
+}
+
+.hover-text h3 {
+  font-size: 2.5rem;
+}
+
+.hover-text p {
+  padding: 1rem;
+}
+
+.hover-text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f77f00;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken(#f77f00, 10%);
+    color: white;
+  }
+}
+
+.Goal {
+  background-color: #929292;
+  border-radius: 30px;
+  margin: 5rem 15rem;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.8);
+}
+
+.Goal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Goal-header h3 {
+  margin-left: 0.5rem;
+}
+
+.Goal-info {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+
+.Goal-info img {
+  width: 400px;
+  margin-left: 3rem;
+  border-radius: 200px;
+}
+
+.bi-award {
+  color: $primary-orange;
+  font-size: 4rem;
+}
+
+.Difference {
+  border-radius: 30px;
+  margin: 5rem 15rem;
+  padding: 2rem;
+}
+
+.Difference-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Difference-header h3 {
+  margin-left: 1rem;
+}
+
+.Difference-info {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+
+.Difference-info img {
+  width: 400px;
+  margin-left: 3rem;
+  border-radius: 200px;
+}
+
+.bi-trophy-fill {
+  color: $primary-orange;
+  font-size: 4rem;
+}
+
+footer {
+  background-color: $primary-grey;
+  color: $primary-orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // spreads text left and image right
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.footer-text {
+  margin: 0 auto;
+  text-align: center;
+  flex: 1;
+}
+
+footer img {
+  max-width: 100px;
+  height: auto;
+  margin-left: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .Goal,
+  .Difference {
+    margin: 2rem;
+    flex-direction: column;
+  }
+
+  .Goal-info,
+  .Difference-info {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      margin-left: 0;
+      margin-top: 1rem;
+      border-radius: 20px;
+    }
+  }
+
+  .hover-text {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    img {
+      max-width: 80px;
+    }
+
+    .nav {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .nav-text {
+      padding: 0.75rem 0;
+    }
+  }
+
+  .Goal,
+  .Difference {
+    margin: 2rem;
+    padding: 1rem;
+  }
+
+  .Goal-header,
+  .Difference-header {
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      margin: 1rem auto 0;
+    }
+  }
+
+  .footer-text {
+    margin: 1rem 0;
+    flex: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hover-text h3 {
+    font-size: 2rem;
+  }
+
+  .hover-text p {
+    font-size: 0.9rem;
+  }
+
+  .Recent {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-text {
+    font-size: 0.9rem;
+  }
+
+  button,
+  .hover-text a {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
