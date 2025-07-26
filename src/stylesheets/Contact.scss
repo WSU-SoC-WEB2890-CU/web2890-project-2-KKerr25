@@ -5,13 +5,19 @@ $primary-orange: #f77f00;
 $primary-grey: #3d3d3d;
 
 header {
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  top: 0;
+  margin-top: 0 !important;
   background-color: $primary-grey;
   color: $primary-orange;
-  padding: 1rem;
+  padding: 0 1rem;
   font-family: "Segoe UI", sans-serif;
+  z-index: 1000;
 }
 
 .Logo {
@@ -89,10 +95,66 @@ footer img {
   margin-left: 1rem;
 }
 
+.looking {
+  margin-top: 8rem !important;
+  border-radius: 15px;
+  margin: 2rem;
+  box-shadow: 1px 2px 5px $primary-grey;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2rem;
+
+  img {
+    border-radius: 15px !important;
+    width: 35rem;
+    max-height: 600px;
+
+    margin-right: 5rem;
+  }
+
+  .bi-tools {
+    color: $primary-orange;
+    font-size: 3rem;
+    margin: 1rem;
+  }
+}
+
+.looking-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img {
+    width: 25rem;
+    margin: 2rem;
+    max-height: 600px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.contact-form {
+  margin: 2rem;
+}
+
 form {
+  border-left: 5px solid $primary-orange;
   background-color: #e2e2e2;
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 10px;
   max-width: 600px;
   margin: 2rem auto;
   display: flex;
@@ -121,7 +183,7 @@ form {
 
 button {
   display: flex;
-  background-color: #f77f00;
+  background-color: $primary-orange;
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -163,10 +225,33 @@ body h2 {
 }
 
 @media screen and (max-width: 768px) {
+  .looking {
+    margin-top: 2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 15rem;
+      margin: 0 !important;
+    }
+  }
+
   header {
+    position: relative;
     flex-direction: column;
     text-align: center;
     padding: 1rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      display: none;
+    }
   }
 
   .nav {
